@@ -1,6 +1,17 @@
 
-const contentDiv = document.getElementById('content');
 
+
+
+const contentDivH1 = document.getElementById('content').children[2];
+const svgElement = document.createElement('svg');
+svgElement.id = 'dataVisualization';
+
+// iife to append after h1 the svg element to post in the datachart
+(() => contentDivH1.after(svgElement))()
+
+const selectSvg = document.getElementById('dataVisualization');
+
+console.log(selectSvg);
 
 
 // window.onload = function() {
