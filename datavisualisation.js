@@ -1,3 +1,6 @@
+
+const contentDiv = document.getElementById('content');
+
 window.onload = function() {
 	var dataPoints = [];
 	var chart;
