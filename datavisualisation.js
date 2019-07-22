@@ -7,7 +7,9 @@ const svgElement = document.createElement('svg');
 svgElement.id = 'dataVisualization';
 
 // iife to append after h1 the svg element to post in the datachart
-(() => contentDivH1.after(svgElement))()
+(() => {
+	contentDivH1.after(svgElement)
+})()
 
 const selectSvg = document.getElementById('dataVisualization');
 
