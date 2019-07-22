@@ -13,8 +13,13 @@ svgElement.id = 'dataVisualization';
 
 const selectSvg = document.getElementById('dataVisualization');
 
-console.log(selectSvg);
+// set width and height of svg
+(() => {
+	selectSvg.setAttribute('Width', '960');
+	selectSvg.setAttribute('Height', '500');
+})()
 
+console.log(selectSvg);
 
 // window.onload = function() {
 // 	var dataPoints = [];
