@@ -1,19 +1,21 @@
 
 // parse table
-var tables = document.querySelectorAll("table");
-for (var table of tables) {
-    console.log(table);
+const tables = document.querySelectorAll("table");
+const data  = parseTable(tables);
+
+console.log(data);
+
+
+
+
+
+
+function parseTable(tables) {
+    let tableElements = [];
     
-  }
-// var data  = parseTable(table);
-// console.log(data);
-console.log(table);
-
-
-
-
-function parseTable(table) {
-
-    
+    for (var table of tables) {
+        tableElements.push(table);
+        
+      }
+    return tableElements;
 }
-
