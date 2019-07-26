@@ -1,27 +1,31 @@
 
 
 
+window.onload = function() {
 
-const contentDivH1 = document.getElementById('content').children[2];
-const svgElement = document.createElement('svg');
-svgElement.id = 'dataVisualization';
+const table1 = document.getElementById('table1')
+const table2 = document.getElementById('table2')
 
-// iife to append after h1 the svg element to post in the datachart
-(() => {
-	contentDivH1.after(svgElement)
-})()
+console.log(table1);
+console.log(table2);
 
-const selectSvg = document.getElementById('dataVisualization');
+var table = document.querySelector("table");
+var data  = parseTable(table);
+console.log(data);
 
-// set width and height of svg
-(() => {
-	selectSvg.setAttribute('Width', '960');
-	selectSvg.setAttribute('Height', '500');
-})()
 
-console.log(selectSvg);
+// const ankerLiveDataContainer = document.getElementById('content').children[2];
+// const containerData = document.createElement('div').innerHTML = "<canvas id="myChart" width="400" height="400"></canvas>";
+// containerElement.id = 'container';
 
-// window.onload = function() {
+// // iife => append container element after h1
+// (() => {
+// 	contentDivH1.after(svgElement)
+// })()
+
+// console.log(document.getElementById('container'));
+
+
 // 	var dataPoints = [];
 // 	var chart;	
 // 	$.getJSON("https://canvasjs.com/services/data/datapoints.php", function(data) {  
@@ -54,3 +58,4 @@ console.log(selectSvg);
 // 	});
 // 	}
 // }
+}
