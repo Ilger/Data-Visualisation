@@ -1,27 +1,83 @@
 
 
 
+window.onload = function() {
 
-const contentDivH1 = document.getElementById('content').children[2];
-const svgElement = document.createElement('svg');
-svgElement.id = 'dataVisualization';
+const table1 = document.getElementById('table1')
+const table2 = document.getElementById('table2')
 
-// iife to append after h1 the svg element to post in the datachart
-(() => {
-	contentDivH1.after(svgElement)
-})()
+console.log(table1);
+console.log(table2);
 
-const selectSvg = document.getElementById('dataVisualization');
+// parse table
+var table = document.getElementById('table2');
+var data  = parseTable(table);
+console.log(data);
 
-// set width and height of svg
-(() => {
-	selectSvg.setAttribute('Width', '960');
-	selectSvg.setAttribute('Height', '500');
-})()
 
-console.log(selectSvg);
+// // make chart
+// var ctx = document.getElementById('myChart').getContext('2d');
+// var myChart = new Chart(ctx, {
+//     type: 'bar',
+//     data: {
+//         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+//         datasets: [{
+//             label: '# of Votes',
+//             data: [12, 19, 3, 5, 2, 3],
+//             backgroundColor: [
+//                 'rgba(255, 99, 132, 0.2)',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(255, 206, 86, 0.2)',
+//                 'rgba(75, 192, 192, 0.2)',
+//                 'rgba(153, 102, 255, 0.2)',
+//                 'rgba(255, 159, 64, 0.2)'
+//             ],
+//             borderColor: [
+//                 'rgba(255, 99, 132, 1)',
+//                 'rgba(54, 162, 235, 1)',
+//                 'rgba(255, 206, 86, 1)',
+//                 'rgba(75, 192, 192, 1)',
+//                 'rgba(153, 102, 255, 1)',
+//                 'rgba(255, 159, 64, 1)'
+//             ],
+//             borderWidth: 1
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             yAxes: [{
+//                 ticks: {
+//                     beginAtZero: true
+//                 }
+//             }]
+//         }
+//     }
+// });
 
-// window.onload = function() {
+
+
+
+
+
+
+
+
+
+
+
+
+// const ankerLiveDataContainer = document.getElementById('content').children[2];
+// const containerData = document.createElement('div').innerHTML = "<canvas id="myChart" width="400" height="400"></canvas>";
+// containerElement.id = 'container';
+
+// // iife => append container element after h1
+// (() => {
+// 	contentDivH1.after(svgElement)
+// })()
+
+// console.log(document.getElementById('container'));
+
+
 // 	var dataPoints = [];
 // 	var chart;	
 // 	$.getJSON("https://canvasjs.com/services/data/datapoints.php", function(data) {  
@@ -54,3 +110,4 @@ console.log(selectSvg);
 // 	});
 // 	}
 // }
+}
