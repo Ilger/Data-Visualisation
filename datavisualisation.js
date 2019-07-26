@@ -10,15 +10,10 @@ console.log(table1);
 console.log(table2);
 
 // parse table
-var table = document.querySelector("table");
+var table = document.getElementById('table2');
 var data  = parseTable(table);
 console.log(data);
 
-var tbl = $('table#students tr').map(function() {
-	return $(this).find('td').map(function() {
-	  return $(this).text();
-	}).get();
-}).get();
 
 // // make chart
 // var ctx = document.getElementById('myChart').getContext('2d');
